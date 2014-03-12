@@ -1,0 +1,7 @@
+#GRAYLOG2_WEB_CTL_DIR=/usr/local/graylog2/web-interface
+#GRAYLOG2_WEB_CLASSPATH="/usr/local/graylog2/web-interface/lib/*"
+#GRAYLOG2_WEB_CONF=/etc/graylog2/web-interface.conf
+#GRAYLOG2_WEB_LOG_CONF=/etc/graylog2/log4j-web-interface.xml
+#GRAYLOG2_WEB_PID=/var/run/graylog2/web-interface.pid
+
+#ADDITIONAL_JAVA_OPTS="-Xms256m -Xmx1g"

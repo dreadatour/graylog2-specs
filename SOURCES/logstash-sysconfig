@@ -1,0 +1,11 @@
+# This can be either of: error, warn, info, debug
+#LOGSTASH_LOGLEVEL=warn
+#LOGSTASH_LOGFILE=/var/log/logstash/logstash.log
+
+#LOGSTASH_PATH_CONF=/etc/logstash/
+#LOGSTASH_PATH_PLUGINS=/usr/local/logstash/plugins/logstash/
+#LOGSTASH_JAVA_OPTS="-Djava.io.tmpdir=/tmp/logstash/"
+#LOGSTASH_FILTERWORKERS=1
+
+#LOGSTASH_MIN_MEM=256m
+#LOGSTASH_MAX_MEM=1g

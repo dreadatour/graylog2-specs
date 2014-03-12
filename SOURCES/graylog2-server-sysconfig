@@ -1,0 +1,8 @@
+#GRAYLOG2_SERVER_CTL_DIR=/usr/local/graylog2/server
+#GRAYLOG2_SERVER_JAR=/usr/local/graylog2/server/graylog2-server.jar
+#GRAYLOG2_SERVER_CONF=/etc/graylog2/server.conf
+#GRAYLOG2_SERVER_LOG_CONF=/etc/graylog2/log4j-server.xml
+#GRAYLOG2_SERVER_PID=/var/run/graylog2/server.pid
+#GRAYLOG2_USER=graylog2
+
+#ADDITIONAL_JAVA_OPTS="-Xms256m -Xmx1g"

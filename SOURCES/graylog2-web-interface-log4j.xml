@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="graylog2-web-interface" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/var/log/graylog2/web-interface.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>/var/log/graylog2/web-interface.log.%d{yyyy-MM-dd}</FileNamePattern>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d %-5p: %c - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="graylog2-web-interface" />
+    </root>
+</configuration>

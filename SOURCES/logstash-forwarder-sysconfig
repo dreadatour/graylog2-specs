@@ -1,0 +1,3 @@
+#LOGSTASH_FORWARDER_CONF=/etc/logstash-forwarder.conf
+#LOGSTASH_FORWARDER_OPTS='-spool-size 1024 -log-to-syslog'
+#USER=mail

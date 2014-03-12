@@ -1,0 +1,8 @@
+#RADIO_CTL_DIR=/usr/local/graylog2/radio
+#RADIO_JAR=/usr/local/graylog2/radio/graylog2-radio.jar
+#RADIO_CONF=/etc/graylog2/radio.conf
+#RADIO_LOG_CONF=/etc/graylog2/log4j-radio.xml
+#RADIO_PID=/var/run/graylog2/radio.pid
+#RADIO_USER=graylog2
+
+#ADDITIONAL_JAVA_OPTS="-Xms256m -Xmx1g"
