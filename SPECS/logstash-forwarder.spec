@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__install} -m 755 %{SOURCE1} %{buildroot}%{_initddir}/%{name}
 %{__install} -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/sysconfig/%{name}
 
+# Create Home directory
+%{__mkdir} -p %{buildroot}%{_sharedstatedir}/%{name}
+
 
 %post
 /sbin/chkconfig --add %{name}
@@ -80,3 +83,8 @@ rm -rf $RPM_BUILD_ROOT
 # Sysconfig and init
 %{_initddir}/%{name}
 %config(noreplace) %{_sysconfdir}/sysconfig/*
+
+%defattr(-,mail,mail,-)
+
+# Home directory
+%dir %{_sharedstatedir}/%{name}/

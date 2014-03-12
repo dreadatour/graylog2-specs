@@ -1,3 +1,5 @@
+#LOGSTASH_FORWARDER_BIN=/usr/local/bin/logstash-forwarder
+#LOGSTASH_FORWARDER_HOME=/var/lib/logstash-forwarder
 #LOGSTASH_FORWARDER_CONF=/etc/logstash-forwarder.conf
 #LOGSTASH_FORWARDER_OPTS='-spool-size 1024 -log-to-syslog'
 #USER=mail

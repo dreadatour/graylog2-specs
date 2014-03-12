@@ -13,6 +13,7 @@
 [ -f /etc/rc.d/init.d/functions ] && . /etc/rc.d/init.d/functions
 
 LOGSTASH_FORWARDER_BIN=/usr/local/bin/logstash-forwarder
+LOGSTASH_FORWARDER_HOME=/var/lib/logstash-forwarder
 LOGSTASH_FORWARDER_CONF=/etc/logstash-forwarder.conf
 LOGSTASH_FORWARDER_OPTS='-spool-size 1024 -log-to-syslog'
 PIDFILE=/var/run/logstash-forwarder.pid
@@ -26,10 +27,11 @@ RETVAL=0
 start() {
     [ -x ${LOGSTASH_FORWARDER_BIN} ] || exit 5
     [ -f ${LOGSTASH_FORWARDER_CONF} ] || exit 6
+    [ -d ${LOGSTASH_FORWARDER_HOME} ] || exit 7
 
     echo -n $"Starting logstash-forwarder: "
 
-    daemon --user $USER --pidfile $PIDFILE "$LOGSTASH_FORWARDER_BIN -config $LOGSTASH_FORWARDER_CONF $LOGSTASH_FORWARDER_OPTS >> /dev/null 2>&1 &"
+    daemon --user $USER --pidfile $PIDFILE "cd $LOGSTASH_FORWARDER_HOME; $LOGSTASH_FORWARDER_BIN -config $LOGSTASH_FORWARDER_CONF $LOGSTASH_FORWARDER_OPTS >> /dev/null 2>&1 &"
     PID=`pidof logstash-forwarder`
     if [ -z $PID ]; then
         echo_failure
